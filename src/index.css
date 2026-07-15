@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+* {
+    font-family: 'Urbanist', sans-serif;
+}
+
+.landing-page {
+    @apply h-screen overflow-y-auto;
+}
+
+.landing-page-content {
+    @apply overflow-visible;
+}
+
+.card-btn {
+    @apply flex items-center gap-3 text-[12px] font-medium text-gray-600;
+}
+
+
+/* .card-btn {
+    /* @apply flex items-center gap-3 text-[12px] font-medium text-gray-600 hover: text-purple-600; */
+
+
+/* } */
+
+
+/* */
+
+.add-btn-fill {
+    @apply bg-purple-600 text-white;
+}
+
+.add-btn {
+    @apply flex items-center gap-1.5 text-xs font-medium text-green-700;
+}
+
+@keyframes drawCircle {
+    from {
+        stroke-dashoffset: 314;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes drawCheck {
+    from {
+        stroke-dashoffset: 80;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.party-left {
+    animation: bounceLeft 1.2s infinite;
+}
+
+.party-right {
+    animation: bounceRight 1.2s infinite;
+    animation-delay: .4s;
+}
+
+@keyframes bounceLeft {
+    0%,
+    100% {
+        transform: translateY(0) rotate(-10deg);
+    }
+    50% {
+        transform: translateY(-8px) rotate(10deg);
+    }
+}
+
+@keyframes bounceRight {
+    0%,
+    100% {
+        transform: translateY(0) rotate(10deg);
+    }
+    50% {
+        transform: translateY(-8px) rotate(-10deg);
+    }
+}
+
+
+/* .add-btn {
+    @apply flex items-center gap-1.5 text-xs md: text-sm font-medium text-green-700;
+} */
