@@ -11,6 +11,7 @@ const apiEndPoints = {
     VERIFY_PAYMENT: `${BASE_URL}/payments/verify-payment`,
     TRANSACTIONS: `${BASE_URL}/transactions`,
     PUBLIC_FILE_VIEW: (fileId) => `${BASE_URL}/files/public/${fileId}`,
+    TRANSACTION_BY_ID: (id) => `${BASE_URL}/transactions/${id}`,
 
 
 

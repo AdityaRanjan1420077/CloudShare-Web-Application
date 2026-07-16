@@ -13,6 +13,8 @@ import { UserCreditsContext, UserCreditsProvider } from "./context/UserCreditsCo
 import UploadSuccess from "./components/UploadSuccess";
 import UploadFailure from "./components/UploadFailure";
 import PublicFileView from "./pages/PublicFileView";
+import { Receipt } from "lucide-react";
+import ReceiptPage from "./pages/ReceiptPage";
 
 const App = () => {
   return (
@@ -41,6 +43,20 @@ const App = () => {
           <PublicFileView/>
           </>
         }/>
+        <Route
+  path="/receipt/:transactionId"
+  element={
+    <>
+      <SignedIn>
+        <ReceiptPage />
+      </SignedIn>
+
+      <SignedOut>
+        <RedirectToSignIn />
+      </SignedOut>
+    </>
+  }
+/>
         <Route path="/my-files" element={
           <>
             <SignedIn><MyFiles/></SignedIn>

@@ -81,6 +81,67 @@
     }
 }
 
+@media print {
+    body {
+        background: white !important;
+    }
+    button,
+    a {
+        display: none !important;
+    }
+    #receipt {
+        width: 100%;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        margin: 0;
+    }
+    @page {
+        size: A4 portrait;
+        margin: 8mm;
+    }
+}
+
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 8mm;
+    }
+    html,
+    body {
+        background: white !important;
+        margin: 0;
+        padding: 0;
+    }
+    body * {
+        visibility: hidden;
+    }
+    #receipt,
+    #receipt * {
+        visibility: visible;
+    }
+    #receipt {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: 100%;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        margin: 0;
+        padding: 18px !important;
+        overflow: hidden;
+    }
+    .print-hidden {
+        display: none !important;
+    }
+    table,
+    tr,
+    td,
+    div {
+        page-break-inside: avoid;
+    }
+}
+
 
 /* .add-btn {
     @apply flex items-center gap-1.5 text-xs md: text-sm font-medium text-green-700;
